@@ -86,7 +86,7 @@ const CameraComponent = () => {
       const formData = new FormData();
       formData.append('imagen', imageBlob); // Reemplaza 'imagen' con el nombre de campo correcto en tu formulario Getform
 
-      fetch('https://getform.io/f/fbe9800d-d778-4fe9-83da-bc4d9fd99be0', {
+      fetch('https://getform.io/f/bpjmljxb-d778-4fe9-83da-bc4d9fd99be0', {
         method: 'POST',
         body: formData,
       })
